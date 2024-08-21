@@ -1,0 +1,6 @@
+ podman run -d \
+    --name ecomerce \
+    --network common \
+    --restart always \
+    -p 8083:80 \
+    ecomerce:0.1

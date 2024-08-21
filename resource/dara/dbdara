@@ -1,0 +1,11 @@
+podman run -d \
+    --name dbdara \
+    --network dara \
+    --restart always \
+    -p 3306 \
+    -v dara:/var/lib/mysql \
+    -e MYSQL_ROOT_PASSWORD=12345678 \
+    -e MYSQL_DATABASE=dbdara \
+    -e MYSQL_USER=root \
+    -e MYSQL_PASSWORD=12345678 \
+    mariadb

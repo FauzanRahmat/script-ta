@@ -1,0 +1,6 @@
+ podman run -d \
+    --name dashboard \
+    --network common \
+    --restart always \
+    -p 8082:80 \
+    dashboard:latest

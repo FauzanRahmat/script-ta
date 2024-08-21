@@ -1,0 +1,2 @@
+podman volume create dbwordpress
+podman volume create wordpress-data

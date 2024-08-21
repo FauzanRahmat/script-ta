@@ -1,0 +1,11 @@
+podman run -d \
+    --name wordpress \
+    --network wordpress \
+    --restart always \
+    -p 8081:80 \
+    -v wordpress-data:/var/www/html \
+    -e WORDPRESS_DB_HOST=dbwordpress \
+    -e WORDPRESS_DB_USER=root \
+    -e WORDPRESS_DB_PASSWORD=12345678 \
+    -e WORDPRESS_DB_NAME=dbwordpress \
+    wordpress

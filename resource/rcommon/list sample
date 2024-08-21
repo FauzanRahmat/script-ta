@@ -1,0 +1,1 @@
+podman run -d --name sample --restart=always -p 8092:80 --network common sample11

@@ -1,0 +1,12 @@
+podman run -d \
+    --name appdara \
+    --network dara \
+    --restart always \
+    -p 8085:8000 \
+    -e LARAVEL_DATABASE_TYPE=mysql \
+    -e LARAVEL_DATABASE_HOST=dbdara \
+    -e LARAVEL_DATABASE_PORT_NUMBER=3306 \
+    -e LARAVEL_DATABASE_NAME=dbdara \
+    -e LARAVEL_DATABASE_USER=root \
+    -e LARAVEL_DATABASE_PASSWORD=12345678 \
+    docker.io/fauzanrahmat/appdara:0.1

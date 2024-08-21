@@ -1,0 +1,11 @@
+podman run -d \
+    --name dbwordpress \
+    --network wordpress \
+    --restart always \
+    -p 3306 \
+    -v dbwordpress:/var/lib/mysql \
+    -e MYSQL_ROOT_PASSWORD=12345678 \
+    -e MYSQL_DATABASE=dbwordpress \
+    -e MYSQL_USER=root \
+    -e MYSQL_PASSWORD=12345678 \
+    mariadb

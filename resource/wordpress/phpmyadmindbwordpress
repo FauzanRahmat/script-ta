@@ -1,0 +1,7 @@
+ podman run -d \
+    --name phpmyadmindbwordpress \
+    --network wordpress \
+    --restart always \
+    -p 8080:80 \
+    -e PMA_HOST=dbwordpress \
+    phpmyadmin
